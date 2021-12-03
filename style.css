@@ -7,35 +7,117 @@ html ::before, ::after {
     margin: 0;
 }
 
-div {
+body {
+    font-size: 16px;
+    background: hsla(90, 81%, 55%, 0.31);
+    margin: 0;
+}
+
+.header_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 80%;
     height: 100vh;
     margin: 0 auto;
+}
 
+.header_container h1 {
+    font-family: 'M PLUS 1 Code', sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: 1.7em;
 }
 
 .reinamomo {
     margin: 0 auto;
     width: 100%;
-    border-radius: 2em;
     padding: 1em;
-    
+    border-radius: 100%;
 }
 
-button {
-    margin: 1.5em;
-    width: 50%;
+.logo_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo_button {
+    margin: 0 auto;
+    width: 16em;
+    height: 16em;
+    border-radius: 50%;
     background-color: hsla(150, 68%, 38%, 0.301);
+    background: url('./images/reinamomo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     cursor: pointer;
-    border-radius: 21em;
+    animation: change 16s infinite;
+    box-shadow: .1em .4em #646;
 }
 
-button:active {
-    padding: 1em;
-    box-shadow: 1px 1px hsla(150, 54%, 67%, 0.952);
-    background: lawngreen;
+.logo_button:active {
+    box-shadow: .1em .1em #646;
 }
+
+@keyframes change {
+    0%   {background-size: 100%;}
+    25%  {background-size: 80%;}
+    50%  {background-size: 60%;}
+    75%  {background-size: 80%;}
+    100% {background-size: 100%;
+          background-blend-mode: saturation;}
+}
+
+.loaders_container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.loader {
+    border: .5em solid #e6a61b;
+    border-radius: 50%;
+    border-top: .6em solid #691be694;
+    margin: 0 auto;
+    width: 6em;
+    height: 6em;
+    -webkit-animation: spin 3s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    /* display: none; */
+  }
+
+.loader_two {
+    border: .5em solid #763ecfb2;
+    border-radius: 50%;
+    border-top: .6em solid #e6a61b;
+    margin: 0 auto;
+    width: 6em;
+    height: 6em;
+    -webkit-animation: spin 3s linear infinite; /* Safari */
+    animation: spin_two 2s linear infinite;
+}
+
+@keyframes spin_two {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+@-webkit-keyframes spin_two {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
