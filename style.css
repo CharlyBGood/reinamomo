@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+html ::before, ::after {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+
+}
+
+.reinamomo {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 2em;
+    padding: 1em;
+    
+}
+
+button {
+    margin: 1.5em;
+    width: 50%;
+    background-color: hsla(150, 68%, 38%, 0.301);
+    cursor: pointer;
+    border-radius: 21em;
+}
+
+button:active {
+    padding: 1em;
+    box-shadow: 1px 1px hsla(150, 54%, 67%, 0.952);
+    background: lawngreen;
+}
